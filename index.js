@@ -3,6 +3,7 @@ var express = require('express'),
     http = require('http'),
     app = express(),
     server = http.createServer(app),
+    port   = process.env.PORT || 7777
     io = io.listen(server);
 
 
@@ -27,4 +28,4 @@ io.on('connection',function(socket){
 })
 
 
- server.listen(7777);
+ server.listen(port);
